@@ -2,7 +2,7 @@
   <div id="app">
     <div class="box">
        
-        
+        <slider> </slider>
           <input type="text" name=" Firstname" v-model="input.firstname" placeholder="Firstname"/>
            <input type="text" name=" Lastname" v-model="input.lastname" placeholder="Lastname"/>
            <input type="text" name=" Phonenumber" v-model="input.phonenumber" placeholder="Phonenumber"/>
@@ -16,7 +16,7 @@
 <script>
 //import Cards from "@/components/Cards.vue";
 //import Login from "@/components/Login.vue";
-//import Slider from "@/components/Slider.vue"; 
+import Slider from "@/components/Slider.vue"; 
 
 
 export default {
@@ -25,7 +25,7 @@ export default {
   components: {
   //  Cards,
    // Login
-   // Slider,
+    Slider,
     //Imag
   },
   data() {
