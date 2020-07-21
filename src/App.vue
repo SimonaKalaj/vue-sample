@@ -1,22 +1,19 @@
 <template>
   <div id="app">
     <div class="box">
-       
-        <slider> </slider>
-          <input type="text" name=" Firstname" v-model="input.firstname" placeholder="Firstname"/>
-           <input type="text" name=" Lastname" v-model="input.lastname" placeholder="Lastname"/>
-           <input type="text" name=" Phonenumber" v-model="input.phonenumber" placeholder="Phonenumber"/>
-          <input type="text" name="username" v-model="input.username" placeholder="Username" />
-        <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <textarea v-model="input.textarea" rows="10" cols="20"> </textarea>
-        <button type="button" @click="reset()">Reset</button>
+       <table-page :heder="heder" :result="result"></table-page>
+               <table-page :heder="names" :result="result"></table-page>
+<h1>toa e <span style="color:red;border: 1px solid black;font-style:italic"> hello </span> world </h1>
     </div> 
   </div>
 </template>
 <script>
 //import Cards from "@/components/Cards.vue";
 //import Login from "@/components/Login.vue";
-import Slider from "@/components/Slider.vue"; 
+//import Slider from "@/components/Slider.vue"; 
+import TablePage from "@/components/TablePage.vue";
+//import TableTwo from "@/components/TableTwo.vue"
+
 
 
 export default {
@@ -25,11 +22,64 @@ export default {
   components: {
   //  Cards,
    // Login
-    Slider,
+  //  Slider,
+    TablePage,
+    //TableTwo
     //Imag
   },
   data() {
     return {
+      names:[
+                {
+                    name:"NAME"
+                    
+                },
+                 {
+                    name:"STREET"
+                    
+                },
+                 {
+                    name:"Mobile"
+                    
+                }
+      ],
+      heder:[
+                {
+                    name:"LAST"
+                    
+                },
+                 {
+                    name:"LASTNAME"
+                    
+                },
+                 {
+                    name:"Mobile"
+                    
+                }
+            ],
+            result:[
+                {
+                    name:"Simona",
+                    lastname:"Kalajdziska",
+                    mobile:"12345"
+                },
+                {
+                    name:"Simona",
+                    lastname:"Kalajdziska",
+                    mobile:"12345"
+                },
+                {
+                    name:"Simona",
+                    lastname:"Kalajdziska",
+                    mobile:"12345"
+                },
+                {
+                    name:"Simona",
+                    lastname:"Kalajdziska",
+                    mobile:"12345"
+                }
+
+            ],
       title2: "PRIVATNA GRADINKA",
       title1: "Salvador Aljende",
       tekst1: "Time",
@@ -78,5 +128,6 @@ this.input.textarea = "";
   align-items:stretch;
   padding: 10px;
   margin-top: 50px;
+  
 }
 </style>
